@@ -5,7 +5,7 @@
 # - aluno B: Pedro Villela Ball, pedrovb@insper.edu.br
 import time 
 
-def imprimir_cenario(cenario_atual):
+def imprime_cenario(cenario_atual):
     print(cenario_atual["titulo"])
     print("-"*len(cenario_atual["titulo"]))
     time.sleep(1)
@@ -73,6 +73,7 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
+        imprime_cenario(cenario_atual)
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
