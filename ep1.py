@@ -1,8 +1,23 @@
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
-# - aluno A: Fulano da Silva, fulanos@insper.edu.br
-# - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+# - aluno A:Gabriel Formario, gabrielf3@insper.edu.br
+# - aluno B: Pedro Villela Ball, pedrovb@insper.edu.br
+import time 
+
+def imprimir_cenario(cenario_atual):
+    print(cenario_atual["titulo"])
+    print("-"*len(cenario_atual["titulo"]))
+    time.sleep(1)
+    print(cenario_atual["descricao"])
+    print("")
+    time.sleep(1)
+    print("Opcoes:")
+    time.sleep(1)
+    for i in cenario_atual["opcoes"]:
+        print(i,":",cenario_atual["opcoes"][i])
+    print("")
+
 
 def carregar_cenarios():
     cenarios = {
@@ -78,7 +93,8 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
-
+    time.sleep(1)            
+    print("")
     print("Você morreu!")
 
 
