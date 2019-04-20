@@ -3,6 +3,8 @@
 # Alunos: 
 # - aluno A:Gabriel Formario, gabrielf3@insper.edu.br
 # - aluno B: Pedro Villela Ball, pedrovb@insper.edu.br
+# - aluno C: Edivaldo Rangel, edivaldojcrj@al.insper.edu.br
+
 import time 
 
 def imprime_cenario(cenario_atual):
