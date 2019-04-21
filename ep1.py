@@ -6,8 +6,56 @@
 # - aluno C: Edivaldo Rangel, edivaldojcrj@al.insper.edu.br
 
 import time 
-import random
+import random 
 
+vida_do_player = 100
+
+def combate():
+    vida_do_monstro = 70
+    opções_de_combate = {
+            'fugir':'Arregar da luta para poupar tempo',
+            'atacar':'Dê uma porrada nesse monstro ordinário!'
+            }
+    while vida_do_player > 0 or vida_do_monstro > 0:
+        print('Você tem {0} pontos de vida '.format(vida_do_player))
+        print('O monstro tem {0} pontos de vida '.format(vida_do_monstro))
+        print(opções_de_combate)
+        decisão = input('Seu turno, o que deseja fazer? ')
+        print(decisão)
+        if decisão == 'atacar':
+            ataque = random.randint(0,100)
+            if ataque >= 90: 
+                vida_do_monstro -= 50
+                print('Ataque crítico! O monstrou perdeu 50 de vida')
+            elif ataque <= 5:
+                print('Você errou o ataque! Mais sorte da próxima vez!')
+            else:
+                vida_do_monstro -= 30
+                print('O monstro perdeu 30 de vida!')
+        elif decisão == 'fugir':
+            fuga = random.randint(0,10)
+            if fuga > 2:
+                print('Fuga bem sucedida, seu arregaõ!')
+                break
+            else:
+                print('Que pena, você não conseguiu fugir!')
+        print('Turno do mostro!')
+        ataque_do_monstro = random.randint(0,100)
+        if ataque_do_monstro >= 90:
+            vida_do_player -= 30
+            print('Ataque crítico! Você perdeu 30 de vida')
+        elif ataque <= 5:
+            print('Você desviou do ataque! Que ligeiro!')
+        else:
+            vida_do_player -= 10
+            print('Você perdeu 10 de vida!')
+    if vida_do_monstro == 0:
+        print('Você derrotou o monstro! Parabéns!')
+        print('Você tem {0} pontos de vida restantes!'.format(vida_do_player))
+    else:
+        print('Acabou seus pontos de vida, você perdeu! Você é muito ruim!')
+        
+        
 def imprime_cenario(cenario_atual):
     print(cenario_atual["titulo"])
     print("-"*len(cenario_atual["titulo"]))
@@ -97,6 +145,9 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+        if vida_do_player == 0:
+            print('Você morreu!')
+            game_over = True
     time.sleep(1)            
     print("")
     print("Você morreu!")
@@ -105,32 +156,4 @@ def main():
 # Programa principal.
 if __name__ == "__main__":
     main()
-    
-def combate():
-    vida_do_player = 100
-    vida_do_monstro = 70
-    opções_de_combate = {
-            'fugir':'Arregar da luta para poupar tempo',
-            'atacar':'Dê uma porrada nesse monstro ordinário!'
-            }
-    while vida_do_player > 0 or vida_do_monstro > 0:
-        print('Você tem {0} pontos de vida '.format(vida_do_player))
-        print('O monstro tem {0} pontos de vida '.format(vida_do_monstro))
-        print(opções_de_combate)
-        decisão = input('O que deseja fazer? ')
-        print(decisão)
-        if decisão == 'atacar':
-            ataque = random.randint(0,100)
-            if ataque >= 90: 
-                vida_do_monstro -= 50
-                print('Ataque crítico! O monstrou perdeu 50 de vida')
-            elif ataque <= 5:
-                print('Você errou o ataque! Mais sorte da próxima vez!')
-            else:
-                vida_do_monstro -= 30
-                print('O monstro perdeu 30 de vida!')
-        elif decisão == 'fugir':
-            fuga = random.randint(0,10)
-            if fuga > 2:
-                print('Fuga bem sucedida!')
         
