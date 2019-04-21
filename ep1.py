@@ -8,9 +8,10 @@
 import time 
 import random 
 
-vida_do_player = 100
+
 
 def combate():
+    vida_do_player = 100
     vida_do_monstro = 70
     opções_de_combate = {
             'fugir':'Arregar da luta para poupar tempo',
@@ -145,9 +146,6 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
-        if vida_do_player == 0:
-            print('Você morreu!')
-            game_over = True
     time.sleep(1)            
     print("")
     print("Você morreu!")
