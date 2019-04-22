@@ -4,8 +4,10 @@
             "titulo": "Saguao do perigo",
             "descricao": "Voce esta no saguao de entrada do insper",
             "opcoes": {
-                "andar professor": "Tomar o elevador para o andar do professor",
-                "biblioteca": "Ir para a biblioteca"
+                "biblioteca": "Ir para a biblioteca",
+                "casa do pão de queijo": "Ir para o refúgio",
+                "Andar 1": " Tomar elevador para o 1ºandar",
+                "Andar 2": " Tomar elevador para o 2ºandar"
             }
         },
         "andar professor": {
@@ -25,8 +27,111 @@
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
+                "inicio": "Voltar para o saguao de entrada",
+                "aquario 1":"Adentrar no misterioso aquario a esquerda",
+                "aquario 2": "Adentrar no misterioso aquario do meio",
+                "aquario 3": "Adentrar no misterioso aquario a direita"
+            }
+        },
+        "casa do pão de queijo": {
+            "titulo": "Refúgio dos esfomeados",
+            "descricao": "Voce esta na casa do pão de queijo, mais conhecido como o refúgio dos esfomeados. Aqui voce pode descansar e desfrutar do famoso suquinho de laranja.",
+            "opcoes": {
                 "inicio": "Voltar para o saguao de entrada"
             }
-        }
+        },
+         "aquario 1": {
+            "titulo": "Sala do misterio",
+            "descricao": "Voce se depara com um aquario completamente escuro. Caso queira desbravar tal local, terá que depender somente da sua sorte e coragem. O que fará ?",
+            "opcoes": {
+                "biblioteca":"Ir para a biblioteca",
+                "continuar no aquario":"Explorar o local"   
+            }
+        },
+        "continuar no aquario": {
+            "titulo": "Sala do azar",
+            "descricao": "Voce foi muito ousado e quis andar no escuro. Como você não é o batman, bateu o joelho na quina da mesa! Perdeu 10 de hp. Ouch!",
+            "opcoes": {
+                "biblioteca": "Ir para a biblioteca"
+            }
+        },
+        "aquario 2": {
+            "titulo": "Sala de estudos",
+            "descricao": "Você entrou em uma sala de estudos. Uau, incrível!",
+            "opcoes": {
+                "biblioteca": "Ir para a biblioteca"
+            }
+        },
+        "aquario 3": {
+            "titulo": "Sala do vazio",
+            "descricao": "Você entrou em uma sala vazia! Mas após uma olhada mais atenta, voce encherga um bilhete. De repente a sala não parece tão vazia assim. Voce pega o bilhete e lê: 'Ivan estava aqui' seguido de 'A lirberdade cantou'. Voce não entende nada.",
+            "opcoes": {
+                "biblioteca": "Ir para a biblioteca"
+            }
+        },
+        "Andar 1": {
+            "titulo": "Andar dos beginners",
+            "descricao": "Parabéns, você uma ação humana básica. Incrível!!. Você se depara com 3 salas abertas ... ",
+            "opcoes": {
+                "inicio": "Voltar para o saguao de entrada",
+                "Sala 1": "Ir para sala 1",
+                "Sala 2": "Ir para o NerdBox",
+                "Sala 3": "Ir para sala do caminho certo"
+            }
+        },
+        "Sala 2 ": {
+            "titulo": "A sala Vingativa dos Nerds",
+            "descricao": "Ao entrar voce se depara com uma das criaturas mais perigosas conhecidas pela humanidade: ... n e r d s ! Ao analisar com cuidado, você percebe, escondido bem no canto, a LENDÁRIA FACA AK-47!! Por mais que seje preocupante o fato de ter uma faca na sala de estudos, você só aceita e a pega",
+            "opcoes": {
+                "Andar 1": "Voltar para o corredor"
+            }
+        },
+         "Sala 1": {
+            "titulo": "Sala do Mistério",
+            "descricao": "Você se encontra numa sala vazia, com somente um computador em cima de uma mesa no centro. Ao se aproximar do computador, você le:'Insira a senha:'",
+            "opcoes": {
+                "Andar 1": "Voltar para o corredor"
+            }
+        },
+        "Sala 3": {
+            "titulo": "Sala do caminho certo",
+            "descricao": "Os seus supersentidos de um aluno desesperado te levaram até esta sala. Depois de explorar um pouco, encontra uma chave estranha perto de um veterano dormindo ... zZzzZzZ Só sonhos. Você pega a chave, obviamente",
+            "opcoes": {
+                "Andar 1 ": "Voltar para o corredor"
+            }
+        },
+        "Andar 2": {
+            "titulo": "Andar das tretas",
+            "descricao": "Você sente um clima mais tenso no ar. Voce percebe q se aproxima de seu destino ... e seu maior inimigo. Voce também percebe ter somente duas salas abertas. ",
+            "opcoes": {
+                "Andar 1": "Voltar para o 1ºandar",
+                "Sala 4": "Ir para sala 4",
+                "Sala 5": "Ir para sala 5",
+                "Sala 6": "Ir para sala 6" 
+            }
+        },
+        "Sala 4": {
+            "titulo": "Sala do Destino",
+            "descricao": "Ao entrar na sala, você se depara com o professor Poloni..., após discutir sobre incertezas com ele, o mesmo menciona o quanto bravo estava com o Fábio Ayres e te entrega uma chave negra! Logo após ele fala'May the force be with you, you will need it boyyyy'",
+            "opcoes": {
+                "Andar 2": "Voltar para o corredor"
+            }
+        },
+        "Sala 5": {
+            "titulo": "Sala do Morro",
+            "descricao": "Ao entrar você imediatamente uma atraçaõ inexplicavel por um canto da sala. Ao olhar para esse canto percebe um revolver .38 em cima de um pedestal na frente de uma parede, nessa parede tem uma foto do Capitao Nascimento e do Trump. Por mais estranho que tudo isso pareça, você aprendeu a ignorar e somente aceitar as coisas. Entao sem delongas pega a arma, sentindo um enorme poder.",
+            "opcoes": {
+                "Andar 2": "Voltar para o corredor"
+            }
+        },
+        "Sala 6": {
+            "titulo": "Sala de teletransporte",
+            "descricao": "Ao entrar na sala, voce se depara com uma ponte de controle com um bilhete escrito:' Basta apenas digitar o nome do lugar, que você será teletransportado para tal. Com amor Hage <3'",
+            "opcoes": {
+                "Andar 2": "Voltar para o corredor"
+            }
+        },
+
+
     }
             
