@@ -7,12 +7,17 @@
 
 import time 
 import random 
+### SISTEMA DE INVENTÁRIO
 
 inventário = {
         "cura":{'revive':'reviva depois de esgotar seus pontos de vida','suquinho de laranja':'recure 40 pontos de vida'},
         'arma':{'.38':'uma arma da pesada','faca de combate ak 47':'a faca perfeita para o combate','lápis':'é o que tem'},
         'itens chave':{'chave de combate':'permite acesso a sala de armas leves','cartão falso':'permite acesso à sala dos professores','chave do morro':'permite acesso à sala dos menó'}
-        }    
+        }   
+
+
+ 
+### FUNÇÃO COMBATE ###
 
 def combate():
     vida_do_player = 100
@@ -60,7 +65,8 @@ def combate():
     else:
         print('Acabou seus pontos de vida, você perdeu! Você é muito ruim!')
         
-        
+### IMPRIME TUDO DO CENÁRIO ATUAL ###       
+
 def imprime_cenario(cenario_atual):
     print(cenario_atual["titulo"])
     print("-"*len(cenario_atual["titulo"]))
@@ -74,6 +80,9 @@ def imprime_cenario(cenario_atual):
         print(i,":",cenario_atual["opcoes"][i])
     print("")
 
+
+
+### ATUALIZA O CENÁRIO ATUAL ###
 
 def carregar_cenarios():
     cenarios = {
@@ -118,6 +127,18 @@ def main():
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    jogador = input("Digite seu nome: ")
+    time.sleep(2)
+    print()
+    print("'{0}!'".format(jogador))
+    time.sleep(2)
+    print("Seu amigo se aproxima de voce e te entrega um KitBixo!")
+    time.sleep(1)
+    print("'Voce esqueceu isso ontem'")
+    time.sleep(2)
+    print()
+    print("KitBixo foi equipado. Use ele com sabedoria...")
+    time.sleep(1)
     print()
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
@@ -131,17 +152,12 @@ def main():
         cenario_atual = cenarios[nome_cenario_atual]
         imprime_cenario(cenario_atual)
 
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
-
+       
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
             escolha = ""
             escolha = input("O que deseja fazer ? ")
 
