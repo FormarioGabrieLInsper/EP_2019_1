@@ -7,6 +7,7 @@
 
 import time 
 import random 
+import json
 ### SISTEMA DE INVENTÁRIO
 
 inventário = {
@@ -84,41 +85,15 @@ def imprime_cenario(cenario_atual):
 
 ### ATUALIZA O CENÁRIO ATUAL ###
 
+
+with open('cenarios.json', 'r',encoding="utf-8-sig")as cenarios_arq:
+    cenarios_str = cenarios_arq.read()
+    cenario_dict = json.loads(cenarios_str)
+
 def carregar_cenarios():
-    cenarios = {
-        "inicio": {
-            "titulo": "Saguao do perigo",
-            "descricao": "Voce esta no saguao de entrada do insper",
-            "opcoes": {
-                "andar professor": "Tomar o elevador para o andar do professor",
-                "biblioteca": "Ir para a biblioteca"
-            }
-        },
-        "andar professor": {
-            "titulo": "Andar do desespero",
-            "descricao": "Voce chegou ao andar da sala do seu professor",
-            "opcoes": {
-                "inicio": "Tomar o elevador para o saguao de entrada",
-                "professor": "Falar com o professor"
-            }
-        },
-        "professor": {
-            "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",
-            "opcoes": {}
-        },
-        "biblioteca": {
-            "titulo": "Caverna da tranquilidade",
-            "descricao": "Voce esta na biblioteca",
-            "opcoes": {
-                "inicio": "Voltar para o saguao de entrada"
-            }
-        }
-    }
+    
     nome_cenario_atual = "inicio"
-    return cenarios, nome_cenario_atual
+    return cenario_dict, nome_cenario_atual
 
 
 def main():
