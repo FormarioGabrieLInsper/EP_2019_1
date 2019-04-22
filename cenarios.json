@@ -107,7 +107,7 @@
                 "Andar 1": "Voltar para o 1ºandar",
                 "Sala 4": "Ir para sala 4",
                 "Sala 5": "Ir para sala 5",
-                "Sala 6": "Ir para sala 6" 
+                "Sala 6": "Ir para sala do teleporte" 
             }
         },
         "Sala 4": {
@@ -128,11 +128,8 @@
             "titulo": "Sala de teletransporte",
             "descricao": "Ao entrar na sala, voce se depara com uma ponte de controle com um bilhete escrito:' Basta apenas digitar o nome do lugar, que você será teletransportado para tal. Com amor Hage <3'",
             "opcoes": {
-                "Andar 2": "Voltar para o corredor",
-                "Teleporte":"Use o Teleporte"
-            }
+                "Andar 2": "Voltar para o corredor"
+            }        
         }
-
-
     }
             

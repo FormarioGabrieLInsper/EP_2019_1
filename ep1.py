@@ -143,8 +143,10 @@ def main():
         else:
             escolha = ""
             escolha = input("O que deseja fazer ? ")
-
-            if escolha in opcoes:
+            if escolha == "Sala 6":
+                teleporte = input('Para onde deseja ir? ')
+                nome_cenario_atual = teleporte
+            elif escolha in opcoes:
                 nome_cenario_atual = escolha
             else:
                 print("Sua indecisão foi sua ruína!")
