@@ -16,7 +16,13 @@ inventário = {
         'itens chave':{'chave de combate':'permite acesso a sala de armas leves','cartão falso':'permite acesso à sala dos professores','chave do morro':'permite acesso à sala dos menó'}
         }   
 
-
+### APARARIÇÃO DE MONSTROS ###
+def aparece_monstro(cenario_atual):
+    if cenario_atual == cenario_atual:
+        chance = random.randint(1,10)
+        if chance <= 4:
+            print('Meu Deus! Um monstro apareceu!')
+            combate()
  
 ### FUNÇÃO COMBATE ###
 
@@ -127,6 +133,7 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         imprime_cenario(cenario_atual)
+        aparece_monstro(cenario_atual)
 
        
         opcoes = cenario_atual['opcoes']
