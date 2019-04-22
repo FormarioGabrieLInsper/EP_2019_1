@@ -8,7 +8,11 @@
 import time 
 import random 
 
-
+inventário = {
+        "cura":{'revive':'reviva depois de esgotar seus pontos de vida','suquinho de laranja':'recure 40 pontos de vida'},
+        'arma':{'.38':'uma arma da pesada','faca de combate ak 47':'a faca perfeita para o combate','lápis':'é o que tem'},
+        'itens chave':{'chave de combate':'permite acesso a sala de armas leves','cartão falso':'permite acesso à sala dos professores','chave do morro':'permite acesso à sala dos menó'}
+        }    
 
 def combate():
     vida_do_player = 100
@@ -46,7 +50,7 @@ def combate():
             vida_do_player -= 30
             print('Ataque crítico! Você perdeu 30 de vida')
         elif ataque <= 5:
-            print('Você desviou do ataque! Que ligeiro!')
+            print('Você desviou do ataque!')
         else:
             vida_do_player -= 10
             print('Você perdeu 10 de vida!')
