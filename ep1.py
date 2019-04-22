@@ -89,6 +89,7 @@ def imprime_cenario(cenario_atual):
 with open('cenarios.json', 'r',encoding="utf-8-sig")as cenarios_arq:
     cenarios_str = cenarios_arq.read()
     cenario_dict = json.loads(cenarios_str)
+    
 
 def carregar_cenarios():
     
