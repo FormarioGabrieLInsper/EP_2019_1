@@ -128,7 +128,8 @@
             "titulo": "Sala de teletransporte",
             "descricao": "Ao entrar na sala, voce se depara com uma ponte de controle com um bilhete escrito:' Basta apenas digitar o nome do lugar, que você será teletransportado para tal. Com amor Hage <3'",
             "opcoes": {
-                "Andar 2": "Voltar para o corredor"
+                "Andar 2": "Voltar para o corredor",
+                "Teleporte":"Use o Teleporte"
             }
         }
 
