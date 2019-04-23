@@ -15,20 +15,24 @@
             "descricao": "Voce chegou ao andar da sala do seu professor",
             "opcoes": {
                 "inicio": "Tomar o elevador para o saguao de entrada",
+                "Andar 2": "Volte para o andar 2", 
                 "professor": "Falar com o professor"
             }
         },
         "professor": {
             "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. O professor revelou que é um monstro disfarçado e devorou sua alma.",
-            "opcoes": {}
+            "descricao": "Voce foi pedir para o professor adiar o EP. O professor revelou que é um monstro disfarçado e devorou sua alma.Mas como você é teimoso, resolveu lutar",
+            "opcoes": {
+                 "Boss fight": "Vai pro pau e adia esse ep!"
+            }
         },
         "biblioteca": {
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
                 "inicio": "Voltar para o saguao de entrada",
-                "aquario 1":"Adentrar no misterioso aquario a esquerda",
+                "aquario 1":"Adentrar no mister
+         "aquario 1": {ioso aquario a esquerda",
                 "aquario 2": "Adentrar no misterioso aquario do meio",
                 "aquario 3": "Adentrar no misterioso aquario a direita"
             }
@@ -40,7 +44,6 @@
                 "inicio": "Voltar para o saguao de entrada"
             }
         },
-         "aquario 1": {
             "titulo": "Sala do misterio",
             "descricao": "Voce se depara com um aquario completamente escuro. Caso queira desbravar tal local, terá que depender somente da sua sorte e coragem. O que fará ?",
             "opcoes": {
@@ -79,7 +82,7 @@
                 "Sala 3": "Ir para sala do caminho certo"
             }
         },
-        "Sala 2 ": {
+        "Sala 2": {
             "titulo": "A sala Vingativa dos Nerds",
             "descricao": "Ao entrar voce se depara com uma das criaturas mais perigosas conhecidas pela humanidade: ... n e r d s ! Ao analisar com cuidado, você percebe, escondido bem no canto, a LENDÁRIA FACA AK-47!! Por mais que seje preocupante o fato de ter uma faca na sala de estudos, você só aceita e a pega",
             "opcoes": {
@@ -107,7 +110,8 @@
                 "Andar 1": "Voltar para o 1ºandar",
                 "Sala 4": "Ir para sala 4",
                 "Sala 5": "Ir para sala 5",
-                "Sala 6": "Ir para sala do teleporte" 
+                "Sala 6": "Ir para sala do teleporte",
+                "andar professor":"Ir pro andar do professor"
             }
         },
         "Sala 4": {
@@ -130,6 +134,11 @@
             "opcoes": {
                 "Andar 2": "Voltar para o corredor"
             }        
-        }
+        }, 
+        "Boss fight": {
+            "titulo": "luta final",
+            "descricao": "Vença essa luta e ganhe o jogo",
+            "opcoes": {
+                "Vitória": "Ganhou!"
     }
             
