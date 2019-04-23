@@ -8,7 +8,25 @@
 import time 
 import random 
 import json
-### SISTEMA DE INVENTÁRIO
+
+
+
+
+
+### ATUALIZA O CENÁRIO ATUAL ###
+
+
+with open('cenarios.json', 'r',encoding="utf-8-sig")as cenarios_arq:
+    cenarios_str = cenarios_arq.read()
+    cenario_dict = json.loads(cenarios_str)
+    
+
+def carregar_cenarios():
+    
+    nome_cenario_atual = "inicio"
+    return cenario_dict, nome_cenario_atual
+
+### SISTEMA DE INVENTÁRIO ###
 
 inventário = {
         "cura":{'suquinho de laranja':'recure 40 pontos de vida'},
@@ -18,6 +36,7 @@ inventário = {
 mochila_do_player = {}
 
 ### APARARIÇÃO DE MONSTROS ###
+
 def aparece_monstro(cenario_atual):
     if cenario_atual == cenario_atual:
         chance = random.randint(1,10)
@@ -26,6 +45,7 @@ def aparece_monstro(cenario_atual):
             combate(vida_do_player)
  
 ### FUNÇÃO COMBATE ###
+            
 vida_do_player = 100
 def combate(vida_do_player):
     vida_do_monstro = 70
@@ -113,20 +133,9 @@ def imprime_cenario(cenario_atual):
 
 
 
-### ATUALIZA O CENÁRIO ATUAL ###
-
-
-with open('cenarios.json', 'r',encoding="utf-8-sig")as cenarios_arq:
-    cenarios_str = cenarios_arq.read()
-    cenario_dict = json.loads(cenarios_str)
-    
-
-def carregar_cenarios():
-    
-    nome_cenario_atual = "inicio"
-    return cenario_dict, nome_cenario_atual
 
 ### BOSS FIGHT ###
+    
 def boss(vida_do_player):
     vida_do_boss = 200
     ataque_do_player = 30
@@ -193,7 +202,7 @@ def boss(vida_do_player):
     
     
 
-### PROGRAMA QUE RODA TUDO###
+### PROGRAMA QUE RODA TUDO ###
     
 def main():
     print("Na hora do sufoco!")
@@ -229,7 +238,7 @@ def main():
         aparece_monstro(cenario_atual)
        
         
-
+       ### OPÇÕES DO JOGADOR ###
        
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
