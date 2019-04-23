@@ -126,6 +126,73 @@ def carregar_cenarios():
     nome_cenario_atual = "inicio"
     return cenario_dict, nome_cenario_atual
 
+### BOSS FIGHT ###
+def boss(vida_do_player):
+    vida_do_boss = 200
+    ataque_do_player = 30
+    ataque_critico = 50
+    opções_de_combate = {
+            'fugir':'Arregar da luta para poupar tempo',
+            'atacar':'Dê uma porrada nesse monstro ordinário!',
+            'inventário': 'Recupere sua vida'
+            }
+    if 'lápis' in mochila_do_player:
+        ataque_do_player += 10
+        ataque_critico += 10
+    elif ' faca de combate ak 47' in mochila_do_player:
+        ataque_do_player += 20
+        ataque_critico += 20
+    elif '.38' in mochila_do_player:
+        ataque_do_player += 30
+        ataque_critico += 30
+    while vida_do_player > 0 or vida_do_boss >0:
+        print('Você tem {0} pontos de vida '.format(vida_do_player))
+        print('O boss tem {0} pontos de vida '.format(vida_do_boss))
+        print(opções_de_combate)
+        decisão = input('Seu turno, o que deseja fazer? ')
+        print(decisão)
+        if decisão == 'atacar':
+            ataque = random.randint(0,100)
+            if ataque >= 90: 
+                vida_do_boss -= ataque_critico
+                print('Ataque crítico! O monstrou perdeu 50 de vida')
+            elif ataque <= 5:
+                print('Você errou o ataque! Mais sorte da próxima vez!')
+            else:
+                vida_do_boss -= ataque_do_player
+                print('O monstro perdeu 30 de vida!')
+        elif decisão == 'fugir':
+                print('Não se foge do boss, seu noob!')
+        else:
+            if 'suquinho_de_laranja' in mochila_do_player:
+                perguntar = input('Deseja se curar? ')
+                if perguntar == 'Sim' or ' sim':
+                    vida_do_player += 40
+                    mochila_do_player['suquinho_de_laranja'] -= 1
+                    print("Você recuperou 40 de hp")
+                elif perguntar == 'Não' or 'não' or 'nao':
+                    print('Perdeu o turno por ser indeciso!')
+        print('Turno do boss!')
+        ataque_do_boss = random.randint(0,100)
+        if ataque_do_boss >= 90:
+            vida_do_player -= 60
+            print('Ataque crítico! Você perdeu 30 de vida')
+        elif ataque_do_boss <= 5:
+            print('Você desviou do ataque!')
+        else:
+            vida_do_player -= 30
+            print('Você perdeu 10 de vida!')
+        if vida_do_boss <= 0:
+            print('Você derrotou o Boss! Parabéns!')
+            print('Você tem {0} pontos de vida restantes!'.format(vida_do_player))  
+            break
+        elif vida_do_player <= 0:
+            print('Acabou seus pontos de vida, você perdeu!')
+            break
+    return vida_do_player
+    
+    
+
 ### PROGRAMA QUE RODA TUDO###
     
 def main():
@@ -155,6 +222,7 @@ def main():
     cenarios, nome_cenario_atual = carregar_cenarios()
 
     game_over = False
+    
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         imprime_cenario(cenario_atual)
@@ -207,7 +275,13 @@ def main():
                     mochila_do_player['suquinho_de_laranja'] += 1
                 else:
                     mochila_do_player['suquinho_de_laranja'] = 1
-                nome_cenario_atual = escolha    
+                nome_cenario_atual = escolha 
+            elif escolha == "Boss fight":
+                boss(vida_do_player)
+                nome_cenario_atual = escolha
+            elif escolha == "Vitória":
+                print('Você ganhou!!!')
+                break
             elif escolha in opcoes:
                 nome_cenario_atual = escolha
             else:
